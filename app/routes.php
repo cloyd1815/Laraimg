@@ -17,7 +17,8 @@ Route::post('/upload', array('as' => 'image_upload', 'uses' => 'UpimgController@
 
 Route::get('/blog', array('as' => 'upimg_blog', 'uses' => 'UpimgController@blog'));
 
-Route::get('/{img}', array('as' => 'upimg_img', 'uses' => 'UpimgController@imgView'))->where('img', '[a-z0-9]+');
+Route::get('/{img}', array('as' => 'upimg_img', 'uses' => 'UpimgController@imgView'))->where('img', '[a-z0-9]{32}');
+Route::get('/{img}.png', array('as' => 'upimg_img', 'uses' => 'UpimgController@imgRaw'))->where('img', '[a-z0-9]{32}');
 
 Route::get('/view', array('as' => 'upimg_img', 'uses' => 'UpimgController@view'));
 
