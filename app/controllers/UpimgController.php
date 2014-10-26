@@ -35,7 +35,8 @@ class UpimgController extends Controller {
 		}
 
 		$response = Response::make($file, 200);
-		$response->header('Content-Type', mime_content_type($file));
+		echo("File is located at '".$file."'");
+		//$response->header('Content-Type', mime_content_type($file));
 
 		return $response;
 	}
