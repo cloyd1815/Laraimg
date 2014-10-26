@@ -29,14 +29,12 @@ class UpimgController extends Controller {
 	public function imgRaw($img) {
 		try {
 			$file = File::get('images/' . $img . '.png');
+			$response = Response::make($file, 200);
+			$response->header('Content-Type', mime_content_type($file));
 		} catch (Exception $error) {
 			// Send error
 			return Redirect::to('/')->with('message', "noimg! The file was too large or missing.");
 		}
-
-		$response = Response::make($file, 200);
-		echo("File is located at '".$file."'");
-		//$response->header('Content-Type', mime_content_type($file));
 
 		return $response;
 	}
