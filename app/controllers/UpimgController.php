@@ -31,12 +31,11 @@ class UpimgController extends Controller {
 			$file = File::get('images/' . $img . '.png');
 			$response = Response::make($file, 200);
 			$response->header('Content-Type', mime_content_type($file));
+			return $response;
 		} catch (Exception $error) {
 			// Send error
 			return Redirect::to('/')->with('message', "noimg! The file was too large or missing.");
 		}
-
-		return $response;
 	}
 
 	public function view() {
