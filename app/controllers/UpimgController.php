@@ -25,7 +25,7 @@ class UpimgController extends Controller {
 	public function imgView($img) {
 		return View::make('upimg.imgView')->with('img', $img);
 	}
-
+/*
 	public function imgRaw($img) {
 		try {
 			$file = File::get('images/' . $img . '.png');
@@ -34,12 +34,12 @@ class UpimgController extends Controller {
 			return Redirect::to('/')->with('message', "noimg! The file was too large or missing.");
 		}
 
-		$response = Response::make($file, 200);
-		$response->header('Content-Type', mime_content_type($file));
+		$response = Response::make('http://upimg.me/images/' . $img . '.png', 200);
+		$response->header('Content-Type', mime_content_type('http://upimg.me/images/' . $img . '.png'));
 
 		return $response;
 	}
-
+*/
 	public function view() {
 		return View::make('upimg.view');
 	}
