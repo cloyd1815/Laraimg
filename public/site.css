@@ -53,7 +53,8 @@ h1 {
 
 /* Viewing Images */
 #main-image {
-	display: block;
-	margin: auto;
 	cursor: default;
+	margin:100%;
+	display: block;
+	width:100%;
 }
