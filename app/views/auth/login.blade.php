@@ -21,3 +21,4 @@
 
 		<p>{{ Form::submit('Submit!') }}</p>
 	{{ Form::close() }}
+	<p>Don't have an account? <a href="/signup">Signup!</a></p>
