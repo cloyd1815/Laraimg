@@ -26,3 +26,4 @@ Route::get('/login', array('as' => 'upimg_loginPage', 'uses' => 'AuthController@
 Route::post('/login', array('as' => 'upimg_login', 'uses' => 'AuthController@login'));
 
 Route::get('logout', array('uses' => 'AuthController@logout'));
+

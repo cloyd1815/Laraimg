@@ -1,5 +1,7 @@
+
 @extends('layouts.default')
 @section('content')
+
 	<div id="mainarea" class="container">
 
 		<h1>upimg</h1>
@@ -21,7 +23,6 @@
 
 		</form>
 
-
      <hr class="featurette-divider">
 
       <div class="row featurette">
@@ -34,4 +35,3 @@
       </div>
 		</div>
 	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-
