@@ -1,0 +1,60 @@
+@import url(http://fonts.googleapis.com/css?family=Gafata);
+
+/* Generic */
+body {
+	font-family: "Gafata", arial, sans-serif !important;
+	padding-top: 120px;
+}
+
+/* Header */
+.navbar-fixed-top {
+	height: 80px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.navbar-fixed-top .collapse > .navbar-nav > li > a {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-size: 16px;
+}
+
+.navbar-fixed-top .navbar-nav > .active > a,
+.navbar-fixed-top .navbar-nav > .active > a:hover {
+	background-color: #ccc !important;
+	color: #333 !important;
+	box-shadow: 0 0 10px rgb(51, 51, 51);
+	padding-bottom: 35px !important;
+}
+
+.navbar-inverse .navbar-brand {
+	padding: 30px;
+	font-size: 28px;
+
+			transition: .3s all ease-in-out;
+		 -o-transition: .3s all ease-in-out;
+	   -moz-transition: .3s all ease-in-out;
+	-webkit-transition: .3s all ease-in-out;
+}
+
+.navbar-brand:hover {
+			transition: .3s all ease-in-out;
+		 -o-transition: .3s all ease-in-out;
+	   -moz-transition: .3s all ease-in-out;
+	-webkit-transition: .3s all ease-in-out;
+}
+
+h1 {
+	text-align: center;
+}
+
+.btn-lg {
+	width: 50%;
+}
+
+/* Viewing Images */
+#main-image {
+	cursor: default;
+	width:100%;
+	margin:auto;
+	display: block;
+}
