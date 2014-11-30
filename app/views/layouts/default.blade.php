@@ -20,11 +20,14 @@
 			<div class="collapse navbar-collapse" id="navbar">
 				<ul class="nav navbar-nav">
 					<li><a href="/">Upload</a></li>
-
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="/account/register">Registration</a></li>
-					<li><a href="blog">Blog</a></li>
+					@if(Auth::check())
+					<li><a href="/logout">Logout</a></li>
+					@else
+					<li><a href="/login">Login</a></li>
+					@endif
+				<li><a href="blog">Blog</a></li>
 				</ul>
 			</div>
 		</div>

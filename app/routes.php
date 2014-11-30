@@ -20,3 +20,9 @@ Route::get('/blog', array('as' => 'upimg_blog', 'uses' => 'UpimgController@blog'
 Route::get('/{img}', array('as' => 'upimg_img', 'uses' => 'UpimgController@imgView'))->where('img', '[a-z0-9]{32}');
 
 Route::get('/view', array('as' => 'upimg_img', 'uses' => 'UpimgController@view'));
+
+Route::get('/login', array('as' => 'upimg_loginPage', 'uses' => 'AuthController@showLogin'));
+
+Route::post('/login', array('as' => 'upimg_login', 'uses' => 'AuthController@login'));
+
+Route::get('logout', array('uses' => 'AuthController@logout'));
