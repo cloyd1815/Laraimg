@@ -1,62 +1,6 @@
-<!DOCTYPE html>
 
-<html lang="en">
-
-<head>
-
-	<title>UpImg &#183; Easy Image Uploads</title>
-
-	<link href="site.css" rel="stylesheet" />
-
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" />
-
-</head>
-
-<body>
-
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-
-		<div class="container">
-
-			<div class="navbar-header">
-
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-
-					<span class="sr-only">Toggle navigation</span>
-
-					<span class="icon-bar"></span>
-
-					<span class="icon-bar"></span>
-
-					<span class="icon-bar"></span>
-
-				</button>
-
-				<a class="navbar-brand" href="/">upimg</a>
-
-			</div>
-
-			<div class="collapse navbar-collapse" id="navbar">
-
-				<ul class="nav navbar-nav">
-
-					<li class="active"><a href="#">Upload</a></li>
-
-				</ul>
-
-				<ul class="nav navbar-nav navbar-right">
-
-					<li><a href="/account/register">Registration</a></li>
-
-					<li><a href="blog">Blog</a></li>
-
-				</ul>
-
-			</div>
-
-		</div>
-
-	</nav>
+@extends('layouts.default')
+@section('content')
 
 	<div id="mainarea" class="container">
 
@@ -79,36 +23,15 @@
 
 		</form>
 
-	</div>
+     <hr class="featurette-divider">
 
+      <div class="row featurette">
+        <div class="col-md-12">
+          <h2 class="featurette-heading">upimg &#183; <span class="text-muted">What is upimg?</span></h2>
+          <p class="lead">upimg was created by <a href="http://ashworth.in">Brendan Ashworth</a>, <a href="http://apemanzilla.me">Apemanzilla</a>, and <a href="http://cloyd1815.me">Colin Loyd</a>. upimg is a image hosting service. That means we will take your images and hold them for you and provide you with a hot link 
+          	or a page url where you can share with friends. We even make it easier to share one picture accross multiple social media services.
+          	To do so just make an account and link your Facebook, Twitter, Pintest... etc.</p>
+        </div>
+      </div>
+		</div>
 	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-
-	<script src="dropzone.js" type="text/javascript"></script>
-
-	<script>
-
-		$(document).ready(function() {
-
-			var imageDrop = new Dropzone("div#mainarea", { url: "/upload"});
-
-		});
-
-	</script>
-
-	<script>
-
-		$(document).ready(function() {
-
-			setTimeout(function() {
-
-				$("#file_input").trigger('click');
-
-			}, 200);
-
-		});
-
-	</script>
-
-</body>
-
-</html>
