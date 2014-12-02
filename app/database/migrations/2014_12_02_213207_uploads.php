@@ -12,7 +12,14 @@ class Uploads extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('uploads', function($table) {
+			$table->increments('id');
+			$table->integer('user_id');
+			$table->string('file_name');
+			$table->integer('visibility');
+			$table->dateTime('expiration');
+			$table->timestamps();
+		}
 	}
 
 	/**
@@ -22,7 +29,7 @@ class Uploads extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('uploads');
 	}
 
 }

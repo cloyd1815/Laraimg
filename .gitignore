@@ -3,9 +3,8 @@
 /public/images
 composer.phar
 composer.lock
+composer.phar
 .env.*.php
 .env.php
 .DS_Store
 Thumbs.db
-
-
