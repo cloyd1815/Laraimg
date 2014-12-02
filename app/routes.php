@@ -30,3 +30,6 @@ Route::get('logout', array('uses' => 'AuthController@logout'));
 Route::get('/signup', array('uses' => 'AuthController@showSignup'));
 
 Route::post('/signup', array('uses' => 'AuthController@signup'));
+
+Route::get('/u/{id}', array('uses' => 'UsersController@show'));
+

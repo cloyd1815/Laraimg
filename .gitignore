@@ -1,6 +1,8 @@
 /bootstrap/compiled.php
 /vendor
-/images
+/public/images
+composer.phar
+composer.lock
 composer.phar
 .env.*.php
 .env.php

@@ -7,3 +7,4 @@
 			<p>Hot link to this resource: <a href="images/{{ $img }}.png">http://upimg.me/images/{{ $img }}.png</a></p>
 		</div>
 	</div>
+@stop

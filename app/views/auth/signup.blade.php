@@ -28,3 +28,5 @@
 		</p>
 		<p>{{ Form::submit('Submit!') }}</p>
 	{{ Form::close() }}
+
+@stop
