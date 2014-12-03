@@ -5,16 +5,16 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class Upload extends Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
-	protected $fillable = array('name', 'username', 'email', 'password');
+	protected $fillable = array('user_id', 'file_name', 'visibility', 'expiration');
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'users';
+	protected $table = 'uploads';
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -23,7 +23,4 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password', 'remember_token');
 
-	public function uploads() {
-		return $this->hasMany('Upload', 'user_id');
-	}
 }
