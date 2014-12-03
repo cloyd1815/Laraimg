@@ -19,7 +19,7 @@ class Uploads extends Migration {
 			$table->integer('visibility');
 			$table->dateTime('expiration');
 			$table->timestamps();
-		}
+		});
 	}
 
 	/**

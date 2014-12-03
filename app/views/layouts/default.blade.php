@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<title>UpImg &#183; Easy Image Uploads</title>
-	<link href="site.css" rel="stylesheet" />
+	<link href={{$url = asset('site.css') }} rel="stylesheet" />
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
