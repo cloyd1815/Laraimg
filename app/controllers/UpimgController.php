@@ -12,6 +12,20 @@ class UpimgController extends Controller {
 			$file = Input::file('file');
 			$fileName = md5_file($file->getRealPath());
 			$file->move('public/images/', $fileName.'.png');
+			
+			if (Auth::check()) {
+				Upload::create(array(
+					'user_id' => Auth::id(),
+					'file_name' => $fileName,
+					'visibility' => '0'
+					));
+			} else {
+				Upload::create(array(
+					'user_id' => '0',
+					'file_name' => $fileName,
+					'visibility' => '0'
+					));
+			}
 			return Redirect::to('/'.$fileName);
 		} else {
 			return Redirect::to('/')->with('message', "noimg! The file was too large or missing.");
