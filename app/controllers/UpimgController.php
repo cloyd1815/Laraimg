@@ -11,7 +11,7 @@ class UpimgController extends Controller {
 		{
 			$file = Input::file('file');
 			$fileName = md5_file($file->getRealPath());
-			$file->move('public/images/', $fileName.'.png');
+			$file->move('images/', $fileName.'.png');
 			
 			if (Auth::check()) {
 				Upload::create(array(
