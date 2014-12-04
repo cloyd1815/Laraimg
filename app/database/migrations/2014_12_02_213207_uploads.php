@@ -18,6 +18,8 @@ class Uploads extends Migration {
 			$table->string('file_name');
 			$table->integer('visibility');
 			$table->dateTime('expiration');
+			$table->string('img_name', 32);
+			$table->string('img_desc', 150);
 			$table->timestamps();
 		});
 	}

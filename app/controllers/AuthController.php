@@ -25,7 +25,7 @@ class AuthController extends Controller {
 				'password' => Input::get('password')
 				);
 
-			if (Auth::attempt($userdata)) {
+			if (Auth::attempt($userdata, true)) {
 
 				return Redirect::intended('/');
 

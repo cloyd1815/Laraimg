@@ -10,7 +10,15 @@
 		@endif
 
 		<br />
+		{{ Form::open(array('url' => '/upload')) }}
 
+		{{ Form::file('file', $attributes = array('id' =>'file_input')) }}
+		<div class="centered">
+		{{ Form::submit('Upload', $attributes = array('class' =>'btn btn-primary btn-lg text-center')) }}
+		</div>
+		{{ Form::close() }}
+
+<!--
 		<form method="POST" action="upload" enctype="multipart/form-data">
 
 			<input id="file_input" name="file" type="file" />
@@ -22,7 +30,7 @@
 			</center>
 
 		</form>
-
+	-->
      <hr class="featurette-divider">
 
       <div class="row featurette">
@@ -34,6 +42,7 @@
         </div>
       </div>
 		</div>
+
 	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 @stop
 

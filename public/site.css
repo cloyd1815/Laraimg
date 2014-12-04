@@ -58,3 +58,7 @@ h1 {
 	margin:auto;
 	display: block;
 }
+
+.centered {
+	text-align:center;
+}
