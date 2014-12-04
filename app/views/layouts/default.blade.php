@@ -24,6 +24,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					@if(Auth::check())
 					<li><a href="/logout">Logout</a></li>
+					<li><a href="/u/{{{ Auth::id() }}}">My Account</a>
 					@else
 					<li><a href="/login">Login</a></li>
 					@endif
