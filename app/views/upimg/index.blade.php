@@ -10,9 +10,9 @@
 		@endif
 
 		<br />
-		{{ Form::open(array('url' => '/upload')) }}
+		{{ Form::open(array('url' => 'upload', 'files' => true)) }}
 
-		{{ Form::file('file', $attributes = array('id' =>'file_input')) }}
+		{{ Form::file('file', $attributes = array('id' => 'file_input', 'type' => 'file')) }}
 		<div class="centered">
 		{{ Form::submit('Upload', $attributes = array('class' =>'btn btn-primary btn-lg text-center')) }}
 		</div>
