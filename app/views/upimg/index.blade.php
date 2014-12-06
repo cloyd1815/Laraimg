@@ -6,13 +6,14 @@
 		<p style="color:red">{{ Session::get('message') }}</p>
 	@endif
 	<br />
-	{{ Form::open(array('url' => 'upload', 'files' => true)) }}
-	{{ Form::file('file', $attributes = array('id' => 'file_input', 'type' => 'file')) }}
 	<div class="centered">
-	<button id="file_input_activator" class="btn btn-info btn-lg text-center">Choose File</button>
-	{{ Form::submit('Upload', $attributes = array('class' =>'btn btn-primary btn-lg text-center')) }}
+		<button id="file_input_activator" class="btn btn-info btn-lg text-center">Choose File</button>
+		{{ Form::open(array('url' => 'upload', 'files' => true)) }}
+		{{ Form::file('file', $attributes = array('id' => 'file_input', 'type' => 'file')) }}
+		
+		{{ Form::submit('Upload', $attributes = array('class' =>'btn btn-primary btn-lg text-center')) }}
+		{{ Form::close() }}
 	</div>
-	{{ Form::close() }}
 	<hr class="featurette-divider">
 	<div class="row featurette">
 		<div class="col-md-12">
