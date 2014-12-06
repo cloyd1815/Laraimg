@@ -14,7 +14,7 @@
 		</p>
 
 		<p>
-			{{ Form::password('password', $attributes = array('class' => 'form-control')) }}
+			{{ Form::password('password', $attributes = array('placeholder' => 'Password', 'class' => 'form-control')) }}
 		</p>
 
 		<p>{{ Form::submit('Login', $attributes = array('class' =>'btn btn-primary btn-lg text-center')) }}</p>
