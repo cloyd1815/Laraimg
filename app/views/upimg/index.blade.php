@@ -26,7 +26,12 @@
 </div>
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script>
-	$('#file_input_activator').onclick=$('#file_input').trigger('click');
+	$(document).ready(function() {
+		$("#file_input_activator").click(function () {
+			$("#file_input").click();
+			console.log("Opening chooser");
+		});
+	});
 </script>
 @stop
 
