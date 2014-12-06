@@ -1,6 +1,8 @@
 @extends('layouts.default')
 @section('content')
-{{ Form::open(array('url' => 'login')) }}
+
+	<div class="centered">
+		{{ Form::open(array('url' => 'login')) }}
 		<h1>Login</h1>
 		<p>
 			{{ $errors->first('email') }}
@@ -8,16 +10,15 @@
 		</p>
 
 		<p>
-			{{ Form::label('email', 'Email Address') }}
-			{{ Form::text('username', Input::old('email'), array('placeholder' => 'Username or Email')) }}
+			{{ Form::text('username', Input::old('email'), $attributes = array('placeholder' => 'Username', 'class' => 'form-control')) }}
 		</p>
 
 		<p>
-			{{ Form::label('password', 'Password') }}
-			{{ Form::password('password') }}
+			{{ Form::password('password', $attributes = array('class' => 'form-control')) }}
 		</p>
 
-		<p>{{ Form::submit('Submit!') }}</p>
-	{{ Form::close() }}
-	<p>Don't have an account? <a href="/signup">Signup!</a></p>
+		<p>{{ Form::submit('Login', $attributes = array('class' =>'btn btn-primary btn-lg text-center')) }}</p>
+		{{ Form::close() }}
+		<p>Don't have an account? <a href="/signup">Signup!</a></p>
+	</div>
 @stop
