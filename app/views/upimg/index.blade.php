@@ -7,7 +7,7 @@
 	@endif
 	<br />
 	<div class="centered">
-		<button id="file_input_activator" class="btn btn-info btn-lg text-center">Choose File</button>
+		<button id="file_input_activator" class="btn btn-info btn-lg text-center">Choose File</button><br /><br />
 		{{ Form::open(array('url' => 'upload', 'files' => true)) }}
 		{{ Form::file('file', $attributes = array('id' => 'file_input', 'type' => 'file')) }}
 		
