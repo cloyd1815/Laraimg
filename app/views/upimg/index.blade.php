@@ -9,6 +9,7 @@
 	{{ Form::open(array('url' => 'upload', 'files' => true)) }}
 	{{ Form::file('file', $attributes = array('id' => 'file_input', 'type' => 'file')) }}
 	<div class="centered">
+	<button id="file_input_activator" class="btn btn-info btn-large text-center">Choose File</button>
 	{{ Form::submit('Upload', $attributes = array('class' =>'btn btn-primary btn-lg text-center')) }}
 	</div>
 	{{ Form::close() }}
@@ -23,5 +24,8 @@
 	</div>
 </div>
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+	$('#file_input_activator').onclick=$('#file_input').trigger('click');
+</script>
 @stop
 

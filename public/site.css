@@ -59,6 +59,11 @@ h1 {
 	display: block;
 }
 
+#file_input {
+	position: absolute;
+	top: -100px;
+}
+
 .centered {
 	text-align:center;
 }
