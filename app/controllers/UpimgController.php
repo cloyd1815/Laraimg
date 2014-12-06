@@ -11,17 +11,11 @@ class UpimgController extends Controller {
 		{
 			$file = Input::file('file');
 			$fileName = md5_file($file->getRealPath());
-<<<<<<< HEAD
-			$file->move('images/', $fileName.'.png');
-			
-=======
 			if (Upload::where('file_name', '=', $fileName)->first()) {
 			return Redirect::to('/'.$fileName);
 			} else {
 			$file->move('public/images/', $fileName . '.png');
 			}
-
->>>>>>> efdcf3d4ffcd79839d883aa517c89067ae0a2f54
 			if (Auth::check()) {
 				Upload::create(array(
 					'user_id' => Auth::id(),
