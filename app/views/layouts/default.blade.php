@@ -23,12 +23,12 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					@if(Auth::check())
-					<li><a href="/logout">Logout</a></li>
-					<li><a href="/u/{{{ Auth::id() }}}">My Account</a>
+						<li><a href="/logout">Logout</a></li>
+						<li><a href="/u/{{{ Auth::id() }}}">My Account</a>
 					@else
-					<li><a href="/login">Login</a></li>
+						<li><a href="/login">Login</a></li>
 					@endif
-				<li><a href="blog">Blog</a></li>
+					<li><a href="blog">Blog</a></li>
 				</ul>
 			</div>
 		</div>

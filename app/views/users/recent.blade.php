@@ -1,8 +1,8 @@
 @extends('layouts.default')
 @section('content')
 <h1>Recent Uploads<h1>
-	<hr class="featurette-divider">
-	@foreach($uploads as $upload)
+<hr class="featurette-divider">
+@foreach($uploads as $upload)
 	<div class="panel panel-primary">
 		<div class="panel-heading">
 			<h1>{{{ $upload->img_name }}}</h1>
@@ -14,5 +14,5 @@
 			</div>
 		</a>
 	</div>
-	@endforeach
+@endforeach
 @stop

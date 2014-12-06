@@ -6,17 +6,24 @@ class UpimgController extends Controller {
 		return View::make('upimg.index');
 	}
 
+	/**
+	 * Process the image uploads
+	 *
+	 * @return redriects to file
+	 */
 	public function uploadImage() {
+		//Check if a file is uploaded
 		if (Input::hasFile('file'))
 		{
 			$file = Input::file('file');
 			$fileName = md5_file($file->getRealPath());
+			//Check if the file is currently in the database
 			if (Upload::where('file_name', '=', $fileName)->first()) {
-			return Redirect::to('/'.$fileName);
+				return Redirect::to('/'.$fileName);
 			} else {
-			$file->move('public/images/', $fileName . '.png');
+				$file->move('public/images/', $fileName . '.png');
 			}
-
+			//Check is the user is logged in, if so log the upload as their's
 			if (Auth::check()) {
 				Upload::create(array(
 					'user_id' => Auth::id(),
