@@ -1,1 +1,6 @@
 [13-Nov-2014 02:17:14 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/cloydme/public_html/upimg.me/Laraimg/app/controllers/UpimgController.php on line 42
+[03-Dec-2014 01:44:26 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/cloydme/public_html/upimg.me/Laraimg/app/controllers/UsersController.php on line 6
+[06-Dec-2014 02:15:57 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/cloydme/public_html/upimg.me/Laraimg/app/controllers/UpimgController.php on line 14
+[06-Dec-2014 02:16:04 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/cloydme/public_html/upimg.me/Laraimg/app/controllers/UpimgController.php on line 14
+[06-Dec-2014 02:16:11 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/cloydme/public_html/upimg.me/Laraimg/app/controllers/UpimgController.php on line 14
+[06-Dec-2014 02:16:59 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/cloydme/public_html/upimg.me/Laraimg/app/controllers/UpimgController.php on line 14
