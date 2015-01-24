@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Uploads extends Migration {
+class IpBans extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,15 +12,11 @@ class Uploads extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('uploads', function($table) {
+		Schema::create('ip_bans', function($table) {
 			$table->increments('id');
 			$table->integer('user_id');
-			$table->string('file_name');
-			$table->integer('visibility');
-			$table->string('upload_ip');
-			$table->dateTime('expiration');
-			$table->string('img_name', 32);
-			$table->string('img_desc', 150);
+			$table->string('ban_reason');
+			$table->string('banned_ip');
 			$table->timestamps();
 		});
 	}
@@ -32,7 +28,7 @@ class Uploads extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('uploads');
+		Schema::drop('ip_bans');
 	}
 
 }
