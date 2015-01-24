@@ -17,7 +17,7 @@ class Uploads extends Migration {
 			$table->integer('user_id');
 			$table->string('file_name');
 			$table->integer('visibility');
-			$table->string('upload_ip');
+			$table->string('uploader_ip');
 			$table->dateTime('expiration');
 			$table->string('img_name', 32);
 			$table->string('img_desc', 150);
