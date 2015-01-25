@@ -8,7 +8,7 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 class Upload extends Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
-	protected $fillable = array('user_id', 'file_name', 'visibility', 'expiration', 'img_name', 'img_desc');
+	protected $fillable = array('user_id', 'file_name', 'visibility', 'expiration', 'img_name', 'img_desc', 'uploader_ip');
 	/**
 	 * The database table used by the model.
 	 *

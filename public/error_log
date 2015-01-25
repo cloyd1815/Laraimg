@@ -4,3 +4,8 @@
 [06-Dec-2014 02:16:04 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/cloydme/public_html/upimg.me/Laraimg/app/controllers/UpimgController.php on line 14
 [06-Dec-2014 02:16:11 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/cloydme/public_html/upimg.me/Laraimg/app/controllers/UpimgController.php on line 14
 [06-Dec-2014 02:16:59 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/cloydme/public_html/upimg.me/Laraimg/app/controllers/UpimgController.php on line 14
+[25-Jan-2015 21:11:11 UTC] PHP Fatal error:  Call to undefined method Symfony\Component\HttpFoundation\Request::trustProxyData() in /home/cloydme/public_html/upimg.me/Laraimg/app/controllers/UpimgController.php on line 18
+[25-Jan-2015 21:31:58 UTC] PHP Parse error:  syntax error, unexpected 'uploads' (T_STRING), expecting ')' in /home/cloydme/public_html/upimg.me/Laraimg/app/models/Upload.php on line 17
+[25-Jan-2015 21:52:26 UTC] PHP Fatal error:  Call to a member function exists() on a non-object in /home/cloydme/public_html/upimg.me/Laraimg/app/controllers/UpimgController.php on line 17
+[25-Jan-2015 21:53:46 UTC] PHP Fatal error:  Call to a member function exists() on a non-object in /home/cloydme/public_html/upimg.me/Laraimg/app/controllers/UpimgController.php on line 17
+[25-Jan-2015 22:33:50 UTC] PHP Fatal error:  Undefined class constant 'ban_reason' in /home/cloydme/public_html/upimg.me/Laraimg/app/controllers/UpimgController.php on line 46

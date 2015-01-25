@@ -55,12 +55,12 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'upimg',
-			'username'  => 'root',
-			'password'  => '',
+			'database'  => 'cloydme_upimg',
+			'username'  => 'cloydme_upimg',
+			'password'  => '~U}B;T8Kumf$',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
+			'prefix'    => ''
 		),
 
 		'pgsql' => array(
