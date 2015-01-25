@@ -21,7 +21,7 @@ class UpimgController extends Controller {
 				if (Upload::where('file_name', '=', $fileName)->first()) {
 					return Redirect::to('/'.$fileName);
 				} else {
-					$file->move('public/images/', $fileName . '.png');
+					$file->move('public_path()/images/', $fileName . '.png');
 				}
 				//Check is the user is logged in, if so log the upload as their's
 				if (Auth::check()) {
