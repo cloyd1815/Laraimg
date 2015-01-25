@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'cloydme_upimg',
-			'username'  => 'cloydme_upimg',
-			'password'  => '~U}B;T8Kumf$',
+			'database'  => 'upimg',
+			'username'  => 'root',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
