@@ -28,13 +28,15 @@ class UpimgController extends Controller {
 				Upload::create(array(
 					'user_id' => Auth::id(),
 					'file_name' => $fileName,
-					'visibility' => '0'
+					'visibility' => '0',
+					'uploader_ip' => Request::getClientIp()
 					));
 			} else {
 				Upload::create(array(
 					'user_id' => '0',
 					'file_name' => $fileName,
-					'visibility' => '0'
+					'visibility' => '0',
+					'uploader_ip' => Request::getClientIp()
 					));
 			}
 			return Redirect::to('/'.$fileName);
