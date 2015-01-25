@@ -13,33 +13,36 @@ class UpimgController extends Controller {
 	 */
 	public function uploadImage() {
 		//Check if a file is uploaded
-		if (Input::hasFile('file'))
-		{
-			$file = Input::file('file');
-			$fileName = md5_file($file->getRealPath());
-			//Check if the file is currently in the database
-			if (Upload::where('file_name', '=', $fileName)->first()) {
+		if (Input::hasFile('file')) {
+			if (Ban::where('banned_ip', '=', Request::getClientIp())->get()) {
+				$file = Input::file('file');
+				$fileName = md5_file($file->getRealPath());
+				//Check if the file is currently in the database
+				if (Upload::where('file_name', '=', $fileName)->first()) {
+					return Redirect::to('/'.$fileName);
+				} else {
+					$file->move('public/images/', $fileName . '.png');
+				}
+				//Check is the user is logged in, if so log the upload as their's
+				if (Auth::check()) {
+					Upload::create(array(
+						'user_id' => Auth::id(),
+						'file_name' => $fileName,
+						'visibility' => '0',
+						'uploader_ip' => Request::getClientIp()
+						));
+				} else {
+					Upload::create(array(
+						'user_id' => '0',
+						'file_name' => $fileName,
+						'visibility' => '0',
+						'uploader_ip' => Request::getClientIp()
+						));
+				}
 				return Redirect::to('/'.$fileName);
 			} else {
-				$file->move('public/images/', $fileName . '.png');
+				return Redirect::to('/')->with('message', "banimg! You have been banned for violating our TOS.");
 			}
-			//Check is the user is logged in, if so log the upload as their's
-			if (Auth::check()) {
-				Upload::create(array(
-					'user_id' => Auth::id(),
-					'file_name' => $fileName,
-					'visibility' => '0',
-					'uploader_ip' => Request::getClientIp()
-					));
-			} else {
-				Upload::create(array(
-					'user_id' => '0',
-					'file_name' => $fileName,
-					'visibility' => '0',
-					'uploader_ip' => Request::getClientIp()
-					));
-			}
-			return Redirect::to('/'.$fileName);
 		} else {
 			return Redirect::to('/')->with('message', "noimg! The file was too large or missing.");
 		}

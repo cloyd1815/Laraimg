@@ -5,7 +5,7 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class Upload extends Eloquent implements UserInterface, RemindableInterface {
+class Ban extends Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 	protected $fillable = array('user_id', 'ban_reason', 'banned_ip');
